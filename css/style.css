@@ -1,0 +1,238 @@
+:root {
+    /* ----- PRIMARY COLORS ----- */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    
+    /* ----- NEUTRAL COLORS ----- */
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --very-dark-blue--low-opacity: hsla(240, 100%, 5%, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    color: var(--very-dark-blue);
+}
+
+.hidden {
+    display: none;
+}
+.hidden-op {
+    z-index: -100;
+    opacity: 0;
+}
+
+.opacity-layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-dark-blue--low-opacity);
+    transition: all .5s ease;
+}
+.opacity-layer-header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease;
+    background-color: var(--very-dark-blue--low-opacity);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    right: -70vw;
+    width: 70vw;
+    z-index: 300;
+    height: 100vh;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+.nav-bar.tranformed {
+    transform: translateX(-70vw);
+}
+
+ul {
+    position: absolute;
+    padding-top: 15rem;
+    padding-left: 2rem;
+    list-style: none;
+}
+
+ul a {
+    font-size: 1.6rem;
+    color: var(--very-dark-blue);
+    text-decoration: none;
+}
+
+ul li {
+    margin-bottom: 2.8rem;
+}
+
+.icon-web-page {
+    width: 6.5rem;
+    height: 4rem;
+}
+
+.icon-menu {
+    z-index: 100;
+    width: 4rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+
+.icon-menu-close {
+    position: fixed;
+    right: 2rem;
+    z-index: 400;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.icon-menu-close.icon-close-rotate {
+    transform: rotate(180deg);
+}
+
+main {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.main-image {
+    width: 100%;
+}
+
+h1 {
+    margin: 2rem 0;
+    padding-right: 1rem;
+    line-height: 4rem;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+main p {
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+main button {
+    width: 15rem;
+    height: 4rem;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    color: var(--off-white);
+    background-color: var(--soft-red);
+}
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--very-dark-blue);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+aside {
+    margin-bottom: 6rem;
+    padding: 2rem;
+    background-color: var(--very-dark-blue);
+}
+
+aside h2 {
+    font-size: 2.8rem;
+    color: var(--soft-orange);
+}
+
+aside article {
+    padding: 3rem 0;
+}
+
+aside article h3 {
+    margin-bottom: 1rem;
+    color: var(--off-white);
+}
+h3:hover {
+    cursor: pointer;
+    color: var(--soft-orange);
+    transition: all 0.3s ease;
+}
+aside article p {
+    color: var(--grayish-blue);
+}
+
+.aside--article__second {
+    border-top: 1px solid var(--dark-grayish-blue);
+    border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.articles article {
+    margin-bottom: 3rem;
+    display: flex;
+}
+
+.articles article img {
+    height: 12rem;
+    margin-right: 2rem;
+}
+
+.article-news--info-container h3 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--grayish-blue);
+}
+.articles article h3:hover {
+    cursor: initial;
+    color: var(--grayish-blue);
+    transition: none;
+}
+
+.article-news--info-container h4 {
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+h4:hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--soft-red);
+}
+
+.article-news--info-container p {
+    line-height: 2.5rem;
+    color: var(--dark-grayish-blue);
+}

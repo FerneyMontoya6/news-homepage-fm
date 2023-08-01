@@ -1,0 +1,104 @@
+body {
+    width: 110rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.7fr repeat(2, 1fr) 0.7fr 0.2fr;
+    grid-template-areas: 
+    "header header header"
+    "main main aside"
+    "main main aside"
+    "main main aside"
+    "articles articles articles"
+    ;
+}
+
+header {
+    position: static;
+    grid-area: header;
+}
+
+
+header {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: initial;
+}
+
+.nav-bar {
+    position: initial;
+    width: auto;
+    height: auto;
+}
+.nav-bar.tranformed {
+    transform: translateX(-70vw);
+}
+
+ul {
+    position: initial;
+    padding-top: 0;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+}
+
+ul a:hover {
+    transition: all 0.3s ease;
+    color: var(--soft-red);
+}
+
+ul li {
+    margin-left: 4rem;
+    margin-bottom: 0;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.icon-menu-close {
+   display: none;
+}
+.opacity-layer, .opacity-layer-header {
+    display: none;
+}
+
+
+
+main {
+    padding-right: 3rem;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    width: 155%;
+    margin: 0;
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.main-info--container {
+    display: flex;
+    align-items: end;
+}
+
+
+aside {
+    grid-area: aside;
+}
+
+.articles {
+    display: flex;
+    grid-area: articles;
+}
+
+
+
+
+
